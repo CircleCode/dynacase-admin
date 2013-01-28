@@ -55,9 +55,17 @@ SQL;
     $action->lay->setBlockData('ADMIN_APPS', $admin_apps);
 
     $user = new_Doc('', $action->user->fid);
-    $action->lay->set("USERNAME", $user->getTitle());
+    $action->lay->set("USER_NAME", $user->getTitle());
 
-    $action->lay->set("WIDGET_PASSWORD", $action->parent->getJsLink("FDL:dcpui.changepassword.js.xml", true));
+    /**
+     * Add widget code
+     */
+    $action->lay->set("WIDGET_PASSWORD", $action->parent->getJsLink("CORE:dcpui.passwordModifier.js.xml", true));
+
+    /**
+     * Test if can change password
+     */
+    $action->lay->set('DISPLAY_CHANGE_BUTTON', ("" === $user->canEdit()));
 }
 
 ?>

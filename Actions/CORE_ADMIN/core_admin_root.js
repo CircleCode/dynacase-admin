@@ -83,8 +83,13 @@
         window.setTimeout(onResize, 1);
         /* Password */
         window.setTimeout(function () {
-            $("#userButton").changePassword();
+            $("#userButton").passwordModifier();
         }, 0);
+        $("#userButton").on("mouseenter", function () {
+            $(this).addClass("ui-state-hover");
+        }).on("mouseleave", function () {
+            $(this).removeClass("ui-state-hover");
+        });
         $("#sidebar").on(
             'click',
             '.app',
