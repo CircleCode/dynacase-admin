@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TEMPLATE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-28 17:43+0100\n"
-"PO-Revision-Date: 2010-01-12 15:35+0100\n"
+"POT-Creation-Date: 2013-01-31 05:48+0100\n"
+"PO-Revision-Date: 2013-01-31 05:51+0100\n"
 "Last-Translator: Jean Martin <jean.martin@somewhere.org>\n"
 "Language-Team: French <distrib@somewhere.org>\n"
 "Language: fr\n"
@@ -34,8 +34,14 @@ msgstr "Interface principale"
 msgid "core_admin:Unified interface exposing all admin applications"
 msgstr "Interface unifiée exposant toutes les applications d'administration"
 
+msgid "core_admin:documentation link"
+msgstr "Accès à la documentation Dynacase"
+
 msgid "core_admin:only administrators can access this area."
 msgstr "Seuls les administrateurs ont accès à cet endroit."
+
+msgid "core_admin:presentation text"
+msgstr "Le centre d'administration propose les applications de gestion de Dynacase et de ses applications."
 
 #, php-format
 msgid "csv file <%s> wroted"

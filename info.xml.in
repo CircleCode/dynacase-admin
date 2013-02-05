@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <module name="@PACKAGE@" disabled="no" version="@VERSION@"
-    release="@RELEASE@">
+    release="@RELEASE@" license="@LICENSE@">
 
     <description>Unified interface exposing all admin applications.
     </description>

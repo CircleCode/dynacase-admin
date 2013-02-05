@@ -33,12 +33,15 @@
             <button id="disconnect" class="css-disconnect-button"></button>
         </div>
         <div class="header-title">
-            <img src="[IMG:core_admin.png]" alt="[TEXT:core_admin:Dynacase administration center]" />
+            <img src="[IMG:logo-dynacase-h36.png]" alt="[TEXT:core_admin:Dynacase administration center]" />
             [TEXT:core_admin:Dynacase administration center]
         </div>
     </div>
-    <ul id="sidebar">[BLOCK ADMIN_APPS]
-        <li class="app selectable"
+    <ul id="sidebar">
+	<li class="doclink">
+	  <a href="http://docs.anakeen.com" target="_blank">[TEXT:core_admin:documentation link]</a>
+	</li>
+        [BLOCK ADMIN_APPS]<li class="app selectable"
             data-appurl="[APPLICATION_URL]"
             data-appname="[APPLICATION_NAME]"
             data-rootaction="[ROOT_ACTION]">[IFNOT HAS_ADMIN_ACTIONS]
@@ -49,7 +52,6 @@
                 <div class="app-description">
                     [APPLICATION_DESC]
                 </div>
-            </div>
 
             [IF HAS_ADMIN_ACTIONS]<ul style="display:none;" class="admin-actions">
                 <li class="admin-actions-loading">[TEXT:core_admin:Loading]</li>[BLOCK ADMIN_ACTIONS]
@@ -61,10 +63,17 @@
                 [ENDBLOCK ADMIN_ACTIONS]
             </ul>
             [ENDIF HAS_ADMIN_ACTIONS]
+            </div>
         </li>
         [ENDBLOCK ADMIN_APPS]
     </ul>
-    <div id="content"></div>
+    <div id="content">
+      <div class="content">
+	<div class="title">[TEXT:core_admin:Dynacase administration center]</div>
+	<p>[TEXT:core_admin:presentation text]</p>
+	<a href="http://docs.anakeen.com" target="_blank">[TEXT:core_admin:documentation link]</a>
+      </div>
+    </div>
     <form style="display:none;" action="[CORE_STANDURL]&amp;app=AUTHENT&amp;action=LOGOUT" method="POST" name="authent"
           id="disconnect-form">
         <input type="hidden" name="SeenBefore" value="1">

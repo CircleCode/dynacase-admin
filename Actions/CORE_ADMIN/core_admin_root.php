@@ -26,7 +26,7 @@ WHERE
     application.tag ~* E'\\yadmin\\y'
     AND application.available = 'Y'
     AND application.name != 'CORE_ADMIN'
-;
+ORDER BY application.id;
 SQL;
 
     simpleQuery('', $query, $adminApps, false, false, true);

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZOO\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-28 17:43+0100\n"
+"POT-Creation-Date: 2013-01-31 05:48+0100\n"
 "PO-Revision-Date: 2010-01-12 15:35+0100\n"
 "Last-Translator: John Doe <john.doe@somewhere.org>\n"
 "Language-Team: English <distrib@somewhere.org>\n"
@@ -33,8 +33,14 @@ msgstr "Main IHM"
 msgid "core_admin:Unified interface exposing all admin applications"
 msgstr "Unified interface exposing all admin applications"
 
+msgid "core_admin:documentation link"
+msgstr ""
+
 msgid "core_admin:only administrators can access this area."
 msgstr "Only administrators can access this area"
+
+msgid "core_admin:presentation text"
+msgstr ""
 
 #, php-format
 msgid "csv file <%s> wroted"

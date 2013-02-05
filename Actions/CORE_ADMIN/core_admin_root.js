@@ -11,8 +11,9 @@
         generateUUID;
 
     reportError = function reportError(err) {
-        //TODO
-        console.log(err);
+        if (window.console && window.console.log) {
+            window.console.log(err);
+        }
     };
 
     onResize = function onResize() {
@@ -107,6 +108,9 @@
 
     injectActionsList = function injectActionsList($app) {
         var appName, actionsList, i, length, title, action, actionsListBody = "";
+        if ($app.hasClass("admin-actions-loaded")) {
+            return;
+        }
         appName = $app.data('appname');
         $('.admin-actions', $app).show();
         $.getJSON(
@@ -142,7 +146,7 @@
             $('.admin-actions', $app)
                 .empty()
                 .append($(actionsListBody));
-            $app.removeClass("selectable ui-state-hover");
+            $app.removeClass("selectable ui-state-hover").addClass("admin-actions-loaded");
         }).fail(function (response) {
             reportError(response.error);
         });
